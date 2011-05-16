@@ -1,0 +1,1 @@
+Javascript effect used on my personal splash page: http://sayemislam.com. Every time you click on the background image all the links within it are instantly reset to a different link, as set by a counter which changes that specified link with each additional click.
