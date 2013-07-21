@@ -1,8 +1,6 @@
 /* 
 
-See http://sayemkhan.com for a demonstration of this script.
-Every time you click on a div encompassing all the links on the page, a counter instantly resets the link url to a new link, 
-which changes with each additional click.       
+See http://sayemkhan.com for a demonstration of this script. Every time you click on a div encompassing all the links on the page, a counter instantly resets the link url to a new link, which changes with each additional click.
 
 */
 
@@ -36,20 +34,25 @@ function stumble() {
     }
 }
 
-// The counter is dependent on how many items are in the newlinks array and how many links are on the page. There are 20 links on sayemkhan.com and there are 4 links in var newlinks, which is why the counter is in four different ranges of 20. After the final click, the fourth one in this case, the counter is reset to newlinks[0]. 
+// The counter is dependent on how many items are in the newlinks array and how many links are on the page. There are 16 links on sayemkhan.com and there are 4 links in var newlinks, which is why the counter is in four different ranges of 16. After the final click, the fourth one in this case, the counter is reset to newlinks[0]. 
 
 var x = 0;
 function misdirect() {
     x += 1;
-    if (x <= 20)
-	return newlinks[0];
-    else if (x > 20 && x <= 40)
-	return newlinks[1];
-    else if (x > 40 && x <= 60)
-	return newlinks[2];
-    else if (x > 60 && x <= 80)
-	return newlinks[3];
-    else
-	x = 0;
-    return newlinks[0];
+    if (x <= 16) {
+	      return newlinks[0];
+    }
+    else if (x > 16 && x <= 32) {
+	      return newlinks[1];
+    }
+    else if (x > 32 && x <= 48) {
+	      return newlinks[2];
+    }
+    else if (x > 48 && x <= 64) {
+	      return newlinks[3];
+    }
+    else {
+	      x = 0;
+        return newlinks[0];
+    }
 }
